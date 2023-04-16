@@ -136,6 +136,21 @@ p {
     }
 }
 
+/* Language */
+.lang {
+    width: 100vw;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.lang a {
+    margin-right: 5vw;
+    text-decoration: underline;
+}
+
+
+
 /*  global classes */
 /* sticky nav*/
 .sticky {
@@ -327,8 +342,74 @@ nav {
     justify-content: center;
 }
 
+.hero-text {
+    margin-top: 2vh;
+    font-size: 1.4rem;
+    width: 37vw;
+    margin-bottom: 0;
+}
+
+.contact-me {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 75%;
+}
+
+.btn {
+    width: 11vw;
+    height: 4.5vh;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    transition: all 0.2s linear;
+}
+
+.btn-contact {
+    /* background-color: #ffffff00; */
+    background-color: #682bd7;
+    border: 2px solid #682bd7;
+    text-transform: uppercase;
+    color: #f0f0f0;
+    margin-top: 2vh;
+    font-size: 1.1rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-self: center;
+
+    margin-right: 1vw;
+}
+
+.btn-portfolio {
+    background-color: #f0f0f013;
+    color: #682bd7;
+    border: 2px solid #682bd7;
+
+    text-transform: uppercase;
+    margin-top: 2vh;
+    font-size: 1.1rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-self: center;
+}
+
+.btn-portfolio:hover {
+    -webkit-box-shadow: 0px 0px 10px 1px rgba(103, 43, 215, 0.27);
+    -moz-box-shadow: 0px 0px 10px 1px rgba(103, 43, 215, 0.27);
+    box-shadow: 0px 0px 10px 1px rgba(103, 43, 215, 0.27);
+}
+
+.btn-contact:hover {
+    -webkit-box-shadow: 0px 0px 10px 1px rgba(103, 43, 215, 0.27);
+    -moz-box-shadow: 0px 0px 10px 1px rgba(103, 43, 215, 0.27);
+    box-shadow: 0px 0px 10px 2px rgba(103, 43, 215, 0.27);
+}
+
 .header {
-    width: auto;
+    width: 100vw;
     height: 60vh;
     position: relative;
     top: 10vh;
@@ -356,14 +437,17 @@ nav {
 }
 
 .headings {
-    margin-left: 20vw;
+    margin-left: 15vw;
 }
 
-.header a {
+
+
+.header .scroll {
     display: flex;
     justify-self: end;
     align-self: center;
-    margin-top: 3vh;
+    margin-top: 0;
+    transform: translateY(-6vh);
 }
 
 .header .img {
@@ -375,7 +459,6 @@ nav {
 
 .shapes img {
     width: 100vw;
-    z-index: 0;
 }
 
 
@@ -859,8 +942,24 @@ footer div {
     }
 
     .header h1,
-    .header h2 {
-        margin-left: 10vw;
+    .header h2,
+    .hero-text {
+        margin-left: 5vw;
+    }
+
+    .hero-text {
+        font-size: 1.5rem;
+        width: 50vw;
+        margin-bottom: 4vh;
+    }
+
+    .btn {
+        width: 15vw;
+        height: 6vh;
+    }
+
+    .btn-contact {
+        font-size: 1.2rem;
     }
 
     .badge {
@@ -874,13 +973,28 @@ footer div {
         letter-spacing: 0.75rem;
     }
 
-    .header a {
+    .header .scroll {
         margin-top: 10vh;
     }
 
     .header h2 {
         font-size: 3rem;
         transform: translateX(0);
+    }
+
+    .hero-text {
+        font-size: 1.25rem;
+        width: 55vw;
+        margin-bottom: 1vh;
+    }
+
+    .btn {
+        width: 20vw;
+    }
+
+    .contact-me {
+        width: 100%;
+        margin-bottom: 5vh;
     }
 
     .badge {
@@ -920,6 +1034,16 @@ footer div {
         margin-left: 2vw;
     }
 
+    .hero-text {
+        width: 70vw;
+        font-size: 1.15rem;
+    }
+
+    .btn {
+        width: 25vw;
+        height: 6.2vh;
+    }
+
     .phone-hide {
         display: none;
     }
@@ -951,11 +1075,26 @@ footer div {
     }
 
     .header h1,
-    .header h2 {
+    .header h2,
+    .hero-text {
         margin-left: 0vw;
     }
 
-    .header a {
+    .hero-text {
+        font-size: 1.2rem;
+        width: 90vw;
+    }
+
+    .contact-me {
+        width: 100%;
+    }
+
+    .btn {
+        width: 35vw;
+        margin-bottom: 3vh;
+    }
+
+    .header .scroll {
         margin-top: 25vh;
     }
 
@@ -1009,12 +1148,28 @@ footer div {
     }
 }
 
+@media screen and (max-width: 420px) {
+    .hero-text {
+        font-size: 1.1rem;
+    }
+
+    .btn {
+        width: 45vw;
+    }
+
+    .header .scroll {
+        transform: translateY(-12vh);
+    }
+}
+
 @media screen and (max-width:360px) {
 
     .header h1,
     .header h2 {
         margin-left: 0;
     }
+
+
 
     .header h1 {
         font-size: 2.5rem;
